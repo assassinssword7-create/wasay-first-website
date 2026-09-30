@@ -1,21 +1,38 @@
-// ======================================
-// MOBILE NAVIGATION
-// ======================================
+/* =========================================================
+   ROYAL CUTS RIYADH
+   JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
 
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
 
-// Open and close mobile menu
+// Open and close the mobile menu
 menuToggle.addEventListener("click", function () {
 
     navMenu.classList.toggle("active");
 
+    menuToggle.classList.toggle("active");
+
+    document.body.classList.toggle("menu-open");
+
+    const isOpen = navMenu.classList.contains("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
 });
 
 
-// Close menu when a navigation link is clicked
-const navLinks = document.querySelectorAll("nav a");
+/* =========================================================
+   CLOSE MOBILE MENU AFTER CLICKING A LINK
+========================================================= */
+
+const navLinks = document.querySelectorAll(".nav-menu a");
 
 navLinks.forEach(function (link) {
 
@@ -23,68 +40,265 @@ navLinks.forEach(function (link) {
 
         navMenu.classList.remove("active");
 
+        menuToggle.classList.remove("active");
+
+        document.body.classList.remove("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
     });
 
 });
 
 
-// ======================================
-// SIMPLE SCROLL ANIMATION
-// ======================================
+/* =========================================================
+   CLOSE MENU WHEN CLICKING OUTSIDE
+========================================================= */
 
-const animatedElements = document.querySelectorAll(
-    ".service-card, .gallery-item, .contact-card, .about-content, .location-content"
-);
+document.addEventListener("click", function (event) {
+
+    const clickedInsideMenu =
+        navMenu.contains(event.target);
+
+    const clickedMenuButton =
+        menuToggle.contains(event.target);
 
 
-// Add initial hidden state
-animatedElements.forEach(function (element) {
+    if (
+        !clickedInsideMenu &&
+        !clickedMenuButton &&
+        navMenu.classList.contains("active")
+    ) {
 
-    element.style.opacity = "0";
-    element.style.transform = "translateY(25px)";
-    element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        navMenu.classList.remove("active");
+
+        menuToggle.classList.remove("active");
+
+        document.body.classList.remove("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+    }
 
 });
 
 
-// Check which elements are visible
-function revealElements() {
+/* =========================================================
+   NAVBAR SCROLL EFFECT
+========================================================= */
 
-    animatedElements.forEach(function (element) {
+const navbar = document.getElementById("navbar");
 
-        const position = element.getBoundingClientRect();
 
-        if (position.top < window.innerHeight - 80) {
+function updateNavbar() {
 
-            element.style.opacity = "1";
-            element.style.transform = "translateY(0)";
+    if (window.scrollY > 50) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+}
+
+
+window.addEventListener("scroll", updateNavbar);
+
+updateNavbar();
+
+
+/* =========================================================
+   SCROLL REVEAL ANIMATION
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver = new IntersectionObserver(
+
+    function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                // Stop watching once the animation has happened
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.12
+    }
+
+);
+
+
+// Start observing every reveal element
+revealElements.forEach(function (element) {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================================
+   FOOTER YEAR
+========================================================= */
+
+const yearElement =
+    document.getElementById("year");
+
+
+if (yearElement) {
+
+    yearElement.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =========================================================
+   SMOOTH SCROLLING
+========================================================= */
+
+const smoothLinks =
+    document.querySelectorAll('a[href^="#"]');
+
+
+smoothLinks.forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+        const targetId =
+            link.getAttribute("href");
+
+
+        // Ignore empty "#" links
+        if (
+            !targetId ||
+            targetId === "#"
+        ) {
+            return;
+        }
+
+
+        const target =
+            document.querySelector(targetId);
+
+
+        if (target) {
+
+            event.preventDefault();
+
+            const navbarHeight =
+                navbar.offsetHeight;
+
+            const targetPosition =
+                target.getBoundingClientRect().top
+                + window.scrollY
+                - navbarHeight;
+
+
+            window.scrollTo({
+
+                top: targetPosition,
+
+                behavior: "smooth"
+
+            });
 
         }
 
     });
 
-}
+});
 
 
-// Run when scrolling
-window.addEventListener("scroll", revealElements);
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+/*
+    IMPORTANT:
+
+    Replace EVERY occurrence of:
+
+    966500000000
+
+    in index.html with the real WhatsApp number.
+
+    Example:
+
+    Saudi number:
+    +966 55 123 4567
+
+    WhatsApp link format:
+    https://wa.me/966551234567
+
+    Do NOT put:
+    + sign
+    spaces
+    brackets
+    dashes
+*/
 
 
-// Run once when page loads
-revealElements();
+const whatsappLinks =
+    document.querySelectorAll(
+        'a[href*="wa.me"]'
+    );
 
 
-// ======================================
-// CURRENT YEAR IN FOOTER
-// ======================================
+whatsappLinks.forEach(function (link) {
 
-// Automatically keeps the copyright year current
-const currentYear = new Date().getFullYear();
+    link.addEventListener("click", function () {
 
-const footerYear = document.querySelector("footer p");
+        console.log(
+            "Opening Royal Cuts Riyadh WhatsApp..."
+        );
 
-if (footerYear) {
+    });
 
-    footerYear.textContent = "© " + currentYear + " Royal Cuts Riyadh";
+});
 
-}
+
+/* =========================================================
+   BUTTON HOVER MICRO-INTERACTION
+========================================================= */
+
+const buttons =
+    document.querySelectorAll(".btn");
+
+
+buttons.forEach(function (button) {
+
+    button.addEventListener("mouseenter", function () {
+
+        button.style.transition =
+            "transform 0.25s ease";
+
+    });
+
+});
+
+
+/* =========================================================
+   PAGE LOADED
+========================================================= */
+
+window.addEventListener("load", function () {
+
+    document.body.classList.add("page-loaded");
+
+});

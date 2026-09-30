@@ -2,393 +2,870 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <h1>ROYAL CUTS RIYADH 🔥 TEST 123</h1>
+    <meta
+        name="description"
+        content="Royal Cuts Riyadh - Premium barbering and grooming in Riyadh, Saudi Arabia."
+    >
 
-    <!-- Google Font -->
+    <title>Royal Cuts Riyadh | Premium Barber Shop</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVIGATION ================= -->
-    <header class="navbar">
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar" id="navbar">
+
         <div class="container nav-container">
 
             <a href="#home" class="logo">
                 ROYAL <span>CUTS</span>
             </a>
 
-            <button class="menu-toggle" id="menuToggle">
-                ☰
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
-            <nav id="navMenu">
+            <nav class="nav-menu" id="navMenu">
+
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#hours">Hours</a>
                 <a href="#contact">Contact</a>
+
             </nav>
 
-            <a href="#contact" class="nav-button">Book Now</a>
+            <a href="#contact" class="nav-book-button">
+                Book Now
+            </a>
 
         </div>
+
     </header>
 
 
-    <!-- ================= HERO ================= -->
-    <section id="home" class="hero">
+    <main>
 
-        <div class="hero-overlay"></div>
+        <!-- =========================
+             HERO
+        ========================== -->
 
-        <div class="hero-content">
+        <section class="hero" id="home">
 
-            <p class="small-title">PREMIUM BARBER SHOP • RIYADH</p>
+            <div class="hero-background"></div>
 
-            <h1>
-                Look Sharp.<br>
-                <span>Feel Royal.</span>
-            </h1>
+            <div class="hero-overlay"></div>
 
-            <p class="hero-text">
-                Premium grooming and classic barbering for the modern gentleman.
-            </p>
+            <div class="container hero-container">
 
-            <div class="hero-buttons">
-                <a href="#contact" class="gold-button">Book Now</a>
-                <a href="#services" class="outline-button">View Services</a>
-            </div>
+                <div class="hero-content">
 
-        </div>
-
-    </section>
-
-
-    <!-- ================= SERVICES ================= -->
-    <section id="services" class="section">
-
-        <div class="container">
-
-            <div class="section-heading">
-                <p class="gold-text">WHAT WE OFFER</p>
-                <h2>Our Services</h2>
-                <p>
-                    Professional cuts and grooming, delivered with attention to every detail.
-                </p>
-            </div>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    <div class="service-icon">✂</div>
-                    <h3>Royal Haircut</h3>
-                    <p>Precision haircut styled to your preference.</p>
-                    <span>45 SAR</span>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">♛</div>
-                    <h3>Beard Trim</h3>
-                    <p>Clean, sharp and perfectly shaped beard.</p>
-                    <span>30 SAR</span>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">✦</div>
-                    <h3>Hair + Beard</h3>
-                    <p>A complete haircut and professional beard trim.</p>
-                    <span>65 SAR</span>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">◆</div>
-                    <h3>Royal Shave</h3>
-                    <p>Traditional smooth shave with premium care.</p>
-                    <span>35 SAR</span>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">✧</div>
-                    <h3>Kids Haircut</h3>
-                    <p>Fresh and stylish cuts for younger gentlemen.</p>
-                    <span>35 SAR</span>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">★</div>
-                    <h3>VIP Grooming</h3>
-                    <p>Haircut, beard, shave and premium finishing.</p>
-                    <span>100 SAR</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="about-section">
-
-        <div class="container about-grid">
-
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=900&q=80"
-                     alt="Professional barber">
-            </div>
-
-            <div class="about-content">
-
-                <p class="gold-text">ABOUT ROYAL CUTS</p>
-
-                <h2>Where Style Meets Tradition</h2>
-
-                <p>
-                    Royal Cuts Riyadh is a modern barber shop built around
-                    precision, style and exceptional service.
-                </p>
-
-                <p>
-                    Whether you want a classic haircut, a modern fade,
-                    a perfectly shaped beard or a complete grooming
-                    experience, our barbers focus on making every visit
-                    comfortable and professional.
-                </p>
-
-                <div class="about-features">
-                    <div>
-                        <strong>01</strong>
-                        <span>Experienced Barbers</span>
+                    <div class="hero-label">
+                        <span></span>
+                        PREMIUM BARBER SHOP • RIYADH
                     </div>
 
-                    <div>
-                        <strong>02</strong>
-                        <span>Premium Grooming</span>
+                    <h1>
+                        Your Style.<br>
+                        <span>Your Crown.</span>
+                    </h1>
+
+                    <p>
+                        Precision cuts, clean fades and premium grooming
+                        for the modern gentleman.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#contact" class="btn btn-gold">
+                            Book Your Cut
+                            <span>→</span>
+                        </a>
+
+                        <a href="#services" class="btn btn-outline">
+                            Explore Services
+                        </a>
+
                     </div>
 
-                    <div>
-                        <strong>03</strong>
-                        <span>Modern Atmosphere</span>
+                    <div class="hero-info">
+
+                        <div>
+                            <strong>6+</strong>
+                            <span>Premium Services</span>
+                        </div>
+
+                        <div>
+                            <strong>7</strong>
+                            <span>Days Available</span>
+                        </div>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Attention to Detail</span>
+                        </div>
+
                     </div>
+
                 </div>
 
             </div>
 
-        </div>
+            <a href="#services" class="scroll-down">
+                <span>SCROLL</span>
+                <div></div>
+            </a>
 
-    </section>
+        </section>
 
 
-    <!-- ================= GALLERY ================= -->
-    <section id="gallery" class="section">
+        <!-- =========================
+             SERVICES
+        ========================== -->
 
-        <div class="container">
+        <section class="section services-section" id="services">
 
-            <div class="section-heading">
-                <p class="gold-text">OUR WORK</p>
-                <h2>Gallery</h2>
-                <p>Some inspiration for your next look.</p>
+            <div class="container">
+
+                <div class="section-header reveal">
+
+                    <span class="section-label">
+                        WHAT WE DO
+                    </span>
+
+                    <h2>
+                        Premium <span>Services</span>
+                    </h2>
+
+                    <p>
+                        Every service is finished with precision,
+                        care and attention to detail.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card reveal">
+
+                        <div class="service-number">01</div>
+
+                        <div class="service-icon">✂</div>
+
+                        <h3>Classic Haircut</h3>
+
+                        <p>
+                            A clean, tailored haircut finished
+                            to your preferred style.
+                        </p>
+
+                        <div class="service-bottom">
+                            <span>From</span>
+                            <strong>45 SAR</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-number">02</div>
+
+                        <div class="service-icon">✦</div>
+
+                        <h3>Premium Fade</h3>
+
+                        <p>
+                            Precision fading with a sharp,
+                            modern finish.
+                        </p>
+
+                        <div class="service-bottom">
+                            <span>From</span>
+                            <strong>55 SAR</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-number">03</div>
+
+                        <div class="service-icon">◆</div>
+
+                        <h3>Beard Trim</h3>
+
+                        <p>
+                            Professional shaping and detailing
+                            for a clean beard.
+                        </p>
+
+                        <div class="service-bottom">
+                            <span>From</span>
+                            <strong>30 SAR</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-number">04</div>
+
+                        <div class="service-icon">◈</div>
+
+                        <h3>Hair + Beard</h3>
+
+                        <p>
+                            The complete grooming combination
+                            for a fresh look.
+                        </p>
+
+                        <div class="service-bottom">
+                            <span>From</span>
+                            <strong>75 SAR</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-number">05</div>
+
+                        <div class="service-icon">◇</div>
+
+                        <h3>Royal Shave</h3>
+
+                        <p>
+                            A traditional premium shave with
+                            a smooth, polished finish.
+                        </p>
+
+                        <div class="service-bottom">
+                            <span>From</span>
+                            <strong>35 SAR</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card featured reveal">
+
+                        <div class="featured-badge">
+                            MOST POPULAR
+                        </div>
+
+                        <div class="service-number">06</div>
+
+                        <div class="service-icon">★</div>
+
+                        <h3>Royal VIP</h3>
+
+                        <p>
+                            Haircut, beard, shave and premium
+                            finishing treatment.
+                        </p>
+
+                        <div class="service-bottom">
+                            <span>From</span>
+                            <strong>100 SAR</strong>
+                        </div>
+
+                    </article>
+
+                </div>
+
             </div>
 
-            <div class="gallery-grid">
+        </section>
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
-                         alt="Barber haircut">
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="section about-section" id="about">
+
+            <div class="container about-grid">
+
+                <div class="about-image reveal">
+
+                    <!-- PLACEHOLDER IMAGE -->
+                    <img
+                        src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1000&q=85"
+                        alt="Professional barber working"
+                    >
+
+                    <div class="about-image-label">
+                        <strong>ROYAL CUTS</strong>
+                        <span>RIYADH</span>
+                    </div>
+
                 </div>
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?auto=format&fit=crop&w=800&q=80"
-                         alt="Barber styling">
-                </div>
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
-                         alt="Barber tools">
-                </div>
+                <div class="about-content reveal">
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
-                         alt="Modern barber shop">
-                </div>
+                    <span class="section-label">
+                        ABOUT ROYAL CUTS
+                    </span>
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?auto=format&fit=crop&w=800&q=80"
-                         alt="Haircut">
-                </div>
+                    <h2>
+                        More Than A<br>
+                        <span>Haircut.</span>
+                    </h2>
 
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1593702288056-792b4d4b2c58?auto=format&fit=crop&w=800&q=80"
-                         alt="Beard grooming">
+                    <p>
+                        Royal Cuts Riyadh is built around one simple idea:
+                        your barber experience should feel as sharp as
+                        your haircut.
+                    </p>
+
+                    <p>
+                        From classic styles to modern fades and detailed
+                        beard work, we combine traditional barbering
+                        techniques with a contemporary atmosphere.
+                    </p>
+
+
+                    <div class="about-points">
+
+                        <div>
+                            <span>01</span>
+                            <div>
+                                <h4>Precision</h4>
+                                <p>Attention to every detail.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <div>
+                                <h4>Comfort</h4>
+                                <p>A relaxed premium atmosphere.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <div>
+                                <h4>Style</h4>
+                                <p>Looks designed around you.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#contact" class="text-link">
+                        Book Your Appointment
+                        <span>→</span>
+                    </a>
+
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= HOURS ================= -->
-    <section id="hours" class="hours-section">
+        <!-- =========================
+             GALLERY
+        ========================== -->
 
-        <div class="container hours-container">
+        <section class="section gallery-section" id="gallery">
 
-            <div>
-                <p class="gold-text">VISIT US</p>
-                <h2>Opening Hours</h2>
-                <p>
-                    Walk in or book your appointment in advance.
-                </p>
-            </div>
+            <div class="container">
 
-            <div class="hours-list">
+                <div class="section-header reveal">
 
-                <div>
-                    <span>Sunday - Thursday</span>
-                    <strong>10:00 AM - 12:00 AM</strong>
+                    <span class="section-label">
+                        THE ROYAL LOOK
+                    </span>
+
+                    <h2>
+                        Our <span>Gallery</span>
+                    </h2>
+
+                    <p>
+                        Replace these placeholder images with photos
+                        of your actual barber shop and work.
+                    </p>
+
                 </div>
 
-                <div>
-                    <span>Friday</span>
-                    <strong>2:00 PM - 12:00 AM</strong>
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item gallery-large reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1000&q=85"
+                            alt="Barber haircut placeholder"
+                        >
+
+                        <div class="gallery-caption">
+                            <span>01</span>
+                            <strong>Precision Cuts</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=85"
+                            alt="Barber styling placeholder"
+                        >
+
+                        <div class="gallery-caption">
+                            <span>02</span>
+                            <strong>Modern Style</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=85"
+                            alt="Barber tools placeholder"
+                        >
+
+                        <div class="gallery-caption">
+                            <span>03</span>
+                            <strong>Detail Work</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85"
+                            alt="Barber shop placeholder"
+                        >
+
+                        <div class="gallery-caption">
+                            <span>04</span>
+                            <strong>The Shop</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item reveal">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?auto=format&fit=crop&w=800&q=85"
+                            alt="Hair styling placeholder"
+                        >
+
+                        <div class="gallery-caption">
+                            <span>05</span>
+                            <strong>Fresh Finish</strong>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div>
-                    <span>Saturday</span>
-                    <strong>10:00 AM - 12:00 AM</strong>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OPENING HOURS
+        ========================== -->
+
+        <section class="hours-section" id="hours">
+
+            <div class="container hours-grid">
+
+                <div class="hours-intro reveal">
+
+                    <span class="section-label">
+                        WHEN TO VISIT
+                    </span>
+
+                    <h2>
+                        Opening <span>Hours</span>
+                    </h2>
+
+                    <p>
+                        Walk in when you're ready, or book ahead
+                        to secure your preferred time.
+                    </p>
+
+                    <div class="open-status">
+                        <span class="status-dot"></span>
+                        Open throughout the week
+                    </div>
+
+                </div>
+
+
+                <div class="hours-card reveal">
+
+                    <div class="hours-row">
+                        <span>Sunday</span>
+                        <strong>10:00 AM — 12:00 AM</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Monday</span>
+                        <strong>10:00 AM — 12:00 AM</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Tuesday</span>
+                        <strong>10:00 AM — 12:00 AM</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Wednesday</span>
+                        <strong>10:00 AM — 12:00 AM</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Thursday</span>
+                        <strong>10:00 AM — 12:00 AM</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Friday</span>
+                        <strong>2:00 PM — 12:00 AM</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Saturday</span>
+                        <strong>10:00 AM — 12:00 AM</strong>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= LOCATION ================= -->
-    <section class="location-section">
+        <!-- =========================
+             LOCATION
+        ========================== -->
 
-        <div class="container location-grid">
+        <section class="section location-section">
 
-            <div class="location-content">
+            <div class="container location-grid">
 
-                <p class="gold-text">FIND US</p>
+                <div class="location-content reveal">
 
-                <h2>Royal Cuts Riyadh</h2>
+                    <span class="section-label">
+                        COME SEE US
+                    </span>
 
-                <p>
-                    Riyadh, Saudi Arabia
-                </p>
+                    <h2>
+                        Find Us In<br>
+                        <span>Riyadh.</span>
+                    </h2>
 
-                <p>
-                    Conveniently located in Riyadh and ready to give
-                    you a premium grooming experience.
-                </p>
+                    <!--
+                        ==========================================
+                        REPLACE THIS PLACEHOLDER ADDRESS
+                        WITH THE REAL BARBER SHOP ADDRESS.
+                        ==========================================
+                    -->
 
-                <a href="https://www.google.com/maps/search/?api=1&query=Riyadh%2C%20Saudi%20Arabia"
-                   target="_blank"
-                   class="gold-button">
-                    Open in Google Maps
-                </a>
+                    <div class="location-detail">
 
-            </div>
+                        <div class="location-icon">⌖</div>
 
-            <div class="map-placeholder">
-                <div>
-                    <span>📍</span>
-                    <h3>Riyadh, Saudi Arabia</h3>
-                    <p>Royal Cuts Riyadh</p>
+                        <div>
+                            <span>ADDRESS</span>
+
+                            <p>
+                                <!-- REPLACE WITH REAL ADDRESS -->
+                                PLACEHOLDER ADDRESS, RIYADH, SAUDI ARABIA
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="location-detail">
+
+                        <div class="location-icon">◷</div>
+
+                        <div>
+                            <span>PHONE</span>
+
+                            <p>
+                                <!-- REPLACE WITH REAL PHONE -->
+                                +966 50 000 0000
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Riyadh%2C%20Saudi%20Arabia"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-gold"
+                    >
+                        Get Directions
+                        <span>↗</span>
+                    </a>
+
                 </div>
-            </div>
-
-        </div>
-
-    </section>
 
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="contact-section">
+                <div class="map-box reveal">
 
-        <div class="container contact-container">
+                    <div class="map-content">
 
-            <div class="section-heading">
-                <p class="gold-text">GET IN TOUCH</p>
-                <h2>Book Your Cut</h2>
-                <p>
-                    Ready for a fresh look? Contact us and reserve your appointment.
-                </p>
-            </div>
+                        <div class="map-pin">
+                            ⌖
+                        </div>
 
-            <div class="contact-grid">
+                        <h3>
+                            Royal Cuts Riyadh
+                        </h3>
 
-                <a href="tel:+966500000000" class="contact-card">
-                    <span>☎</span>
-                    <h3>Call Us</h3>
-                    <p>+966 50 000 0000</p>
-                </a>
+                        <p>
+                            Riyadh, Saudi Arabia
+                        </p>
 
-                <a href="https://wa.me/966500000000"
-                   target="_blank"
-                   class="contact-card">
-                    <span>☏</span>
-                    <h3>WhatsApp</h3>
-                    <p>Message us anytime</p>
-                </a>
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Riyadh%2C%20Saudi%20Arabia"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Open Google Maps →
+                        </a>
 
-                <a href="mailto:hello@royalcutsriyadh.com"
-                   class="contact-card">
-                    <span>✉</span>
-                    <h3>Email</h3>
-                    <p>hello@royalcutsriyadh.com</p>
-                </a>
+                    </div>
+
+                </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= FOOTER ================= -->
+        <!-- =========================
+             CONTACT / BOOKING
+        ========================== -->
+
+        <section class="section contact-section" id="contact">
+
+            <div class="container">
+
+                <div class="contact-box reveal">
+
+                    <div class="contact-heading">
+
+                        <span class="section-label">
+                            READY FOR A FRESH LOOK?
+                        </span>
+
+                        <h2>
+                            Book Your<br>
+                            <span>Royal Cut.</span>
+                        </h2>
+
+                        <p>
+                            Contact us directly and arrange your
+                            next appointment.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-options">
+
+                        <!--
+                            ==================================================
+                            WHATSAPP NUMBER
+
+                            REPLACE 966500000000 BELOW WITH THE REAL
+                            WHATSAPP NUMBER.
+
+                            Format:
+                            Saudi Arabia +966
+                            Example:
+                            966512345678
+
+                            Do NOT include +, spaces or dashes.
+                            ==================================================
+                        -->
+
+                        <a
+                            href="https://wa.me/966500000000"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-option whatsapp-option"
+                        >
+
+                            <div class="contact-option-icon">
+                                ☏
+                            </div>
+
+                            <div>
+                                <span>FASTEST RESPONSE</span>
+                                <h3>WhatsApp</h3>
+                                <p>Message us to book your appointment.</p>
+                            </div>
+
+                            <strong>→</strong>
+
+                        </a>
+
+
+                        <a
+                            href="tel:+966500000000"
+                            class="contact-option"
+                        >
+
+                            <div class="contact-option-icon">
+                                ☎
+                            </div>
+
+                            <div>
+                                <span>CALL US</span>
+                                <h3>+966 50 000 0000</h3>
+                                <p>Speak with the shop directly.</p>
+                            </div>
+
+                            <strong>→</strong>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
 
-        <div class="container footer-content">
+        <div class="container footer-top">
 
-            <div>
-                <h3>ROYAL <span>CUTS</span></h3>
-                <p>Premium barbering in Riyadh.</p>
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    ROYAL <span>CUTS</span>
+                </a>
+
+                <p>
+                    Premium barbering in the heart of Riyadh.
+                </p>
+
             </div>
 
-            <div>
-                <p>© 2026 Royal Cuts Riyadh</p>
-                <p>All Rights Reserved.</p>
+
+            <div class="footer-links">
+
+                <div>
+                    <h4>Navigate</h4>
+
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#gallery">Gallery</a>
+                </div>
+
+
+                <div>
+                    <h4>Visit</h4>
+
+                    <a href="#hours">Opening Hours</a>
+                    <a href="#contact">Book Now</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
             </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © <span id="year"></span> Royal Cuts Riyadh. All rights reserved.
+            </p>
+
+            <p>
+                Riyadh, Saudi Arabia
+            </p>
 
         </div>
 
     </footer>
 
 
-    <!-- ================= WHATSAPP BUTTON ================= -->
-    <a href="https://wa.me/966500000000"
-       class="whatsapp-button"
-       target="_blank"
-       aria-label="Chat on WhatsApp">
-        ☏
+    <!-- =========================
+         FLOATING WHATSAPP
+    ========================== -->
+
+    <!--
+        REPLACE 966500000000 WITH THE REAL
+        WHATSAPP NUMBER.
+    -->
+
+    <a
+        href="https://wa.me/966500000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="floating-whatsapp"
+        aria-label="Contact Royal Cuts Riyadh on WhatsApp"
+    >
+        <span>☏</span>
     </a>
 
 
-    <!-- JavaScript -->
+    <!-- Your JavaScript file -->
     <script src="script.js"></script>
 
 </body>
