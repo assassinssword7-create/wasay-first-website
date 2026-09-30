@@ -1,16 +1,755 @@
+/* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 100px;
-    background: #f2f2f2;
+    background: #0b0b0b;
+    color: #f5f5f5;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
 }
 
-h1 {
-    font-size: 40px;
+img {
+    width: 100%;
+    display: block;
 }
 
-button {
-    padding: 12px 25px;
-    font-size: 18px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid #252525;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span,
+footer span {
+    color: #c9a45c;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #ddd;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c9a45c;
+}
+
+.nav-button {
+    background: #c9a45c;
+    color: #111;
+    padding: 11px 20px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.gold-button:hover {
+    background: #e0bf78;
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
     cursor: pointer;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.35)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 70px;
+    animation: fadeUp 1s ease;
+}
+
+.small-title {
+    color: #c9a45c;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #c9a45c;
+}
+
+.hero-text {
+    color: #ddd;
+    max-width: 520px;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gold-button,
+.outline-button {
+    display: inline-block;
+    padding: 14px 27px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.gold-button {
+    background: #c9a45c;
+    color: #111;
+}
+
+.outline-button {
+    border: 1px solid #aaa;
+    color: white;
+}
+
+.outline-button:hover {
+    border-color: #c9a45c;
+    color: #c9a45c;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.gold-text {
+    color: #c9a45c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.about-content h2,
+.location-content h2,
+.hours-container h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.section-heading p:last-child {
+    color: #999;
+}
+
+
+/* ================================
+   SERVICES
+================================ */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #141414;
+    border: 1px solid #272727;
+    padding: 35px 25px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: #c9a45c;
+}
+
+.service-icon {
+    color: #c9a45c;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.service-card span {
+    color: #c9a45c;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-section {
+    background: #111;
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-image {
+    overflow: hidden;
+}
+
+.about-image img {
+    height: 560px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+.about-content > p:not(.gold-text) {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.about-features {
+    margin-top: 30px;
+    display: grid;
+    gap: 15px;
+}
+
+.about-features div {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-bottom: 1px solid #292929;
+    padding-bottom: 12px;
+}
+
+.about-features strong {
+    color: #c9a45c;
+}
+
+.about-features span {
+    color: #ddd;
+    font-size: 14px;
+}
+
+
+/* ================================
+   GALLERY
+================================ */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    height: 300px;
+}
+
+.gallery-item img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================================
+   HOURS
+================================ */
+
+.hours-section {
+    background: #c9a45c;
+    color: #111;
+    padding: 75px 0;
+}
+
+.hours-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hours-container .gold-text {
+    color: #111;
+}
+
+.hours-container h2 {
+    margin-bottom: 10px;
+}
+
+.hours-container p {
+    max-width: 450px;
+}
+
+.hours-list {
+    background: #111;
+    color: white;
+    padding: 30px;
+}
+
+.hours-list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+}
+
+.hours-list div:last-child {
+    border-bottom: none;
+}
+
+.hours-list strong {
+    color: #c9a45c;
+}
+
+
+/* ================================
+   LOCATION
+================================ */
+
+.location-section {
+    padding: 100px 0;
+    background: #0b0b0b;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: stretch;
+}
+
+.location-content {
+    padding: 30px 0;
+}
+
+.location-content p:not(.gold-text) {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.location-content .gold-button {
+    margin-top: 10px;
+}
+
+.map-placeholder {
+    min-height: 400px;
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.map-placeholder span {
+    font-size: 45px;
+}
+
+.map-placeholder h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.map-placeholder p {
+    color: #ccc;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-section {
+    background: #111;
+    padding: 100px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    text-align: center;
+    background: #171717;
+    border: 1px solid #292929;
+    padding: 35px 20px;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    border-color: #c9a45c;
+    transform: translateY(-5px);
+}
+
+.contact-card span {
+    display: block;
+    color: #c9a45c;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #080808;
+    border-top: 1px solid #222;
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer h3 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* ================================
+   WHATSAPP BUTTON
+================================ */
+
+.whatsapp-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 58px;
+    height: 58px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    z-index: 999;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   TABLETS
+================================ */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .hours-container,
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 450px;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        height: 65px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #0d0d0d;
+
+        display: none;
+        flex-direction: column;
+        gap: 0;
+
+        border-bottom: 1px solid #333;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 15px 25px;
+        border-bottom: 1px solid #222;
+    }
+
+    .hero {
+        min-height: 90vh;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .section,
+    .about-section,
+    .location-section,
+    .contact-section {
+        padding: 70px 0;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .location-content h2,
+    .hours-container h2 {
+        font-size: 36px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+
+    .hours-list div {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .whatsapp-button {
+        width: 52px;
+        height: 52px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
+
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
